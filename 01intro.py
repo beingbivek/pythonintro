@@ -1,0 +1,11 @@
+# my details
+print("Name: Bivek Thapa")
+print("Address: Kathmandu")
+print("Religion: Hindu")
+print("Gender: Male")
+print("Contact: 9843715895")
+print("Position: Student of BRP")
+print("Marital status: Married")
+print("Birthplace: Patharisanischare")
+print("Hobby: Video Editor")
+print("Visited Pokhara: Yes")
