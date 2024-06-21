@@ -62,6 +62,7 @@ for k in country_capital:
 # for i in country_capital['Nepal']:
 #     print(i)
 
+# Keys only and sorting and reverse sorting
 all_key = list(country_capital.keys())
 all_key.sort()
 print(all_key)
