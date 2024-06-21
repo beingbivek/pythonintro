@@ -59,5 +59,11 @@ for k in country_capital:
     print(f"Capital city of {k} is {country_capital[k]}")
 
 # String Loop
-for i in country_capital['Nepal']:
-    print(i)
+# for i in country_capital['Nepal']:
+#     print(i)
+
+all_key = list(country_capital.keys())
+all_key.sort()
+print(all_key)
+all_key.reverse()
+print(all_key)
