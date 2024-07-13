@@ -15,16 +15,18 @@ Enter
 
 user_input = int(input(usertext))
 if user_input == 1:
-    c.addProduct()
+    c.addcustomer()
 elif user_input == 2:
-    c.viewallproduct()
+    c.viewallcustomer()
 elif user_input == 3:
-    pid = input("Enter product ID: ")
-    c.viewsingleproduct(pid)
+    cid = input("Enter Customer ID: ")
+    c.viewsinglecustomer(cid)
 elif user_input == 4:
-    pass
+    cname = input("Enter Customer Name: ")
+    c.searchcustomerbyname(cname)
 elif user_input == 5:
-    pass
+    cid = input("Enter Customer ID to delete: ")
+    c.deletecustomer(cid)
 elif user_input == 6:
     pass
 else: print("Invalid Option")

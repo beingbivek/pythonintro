@@ -1,5 +1,6 @@
 import csv
 from customer import Customer
+import os
 
 filelocation = './17Bank/customer.csv'
 
@@ -24,10 +25,10 @@ def readFile(): # This is efficient way using Class and CSV
             all_customer.append(c)
     return all_customer
 
-def addProduct():
-    newpronum = int(input("Enter no's of products to add: "))
-    for i in range(newpronum):
-        c = Customer(id="",name="",phone="",balance="")
+def addcustomer():
+    noofcust = int(input("Enter no's of customers to add: "))
+    for i in range(noofcust):
+        c = Customer(id="",name="",phone="",balance="",ctzno="")
         c.i = input(f"Enter Customer {i+1} ID: ")
         c.n = input(f"Enter Customer {i+1} Name: ")
         c.p = input(f"Enter Customer {i+1} Phone Number: ")
@@ -35,20 +36,47 @@ def addProduct():
         c.c = input(f"Enter Customer {i+1} Citizenship No.: ")
         writeFile(f"{c.i},{c.n},{c.p},{c.b},{c.c}\n")
 
-def viewallproduct():
+def viewallcustomer():
     print("View All Customers: \n-------------")
     for data in readFile():
-        data.displayproduct()
+        data.displaycustomer()
     print("\n-------------\n")
 
-def viewsingleproduct(pid):
+def viewsinglecustomer(cid):
     for data in readFile():
-        if data.i == pid:
-            product = data
+        if data.i == cid:
+            customer = data
             break
         else:
-            product = None
-    if product != None:
-        product.displayproduct()
-    else: print("No such product found.")
+            customer = None
+    if customer != None:
+        customer.displaycustomer()
+    else: print("No such customer found.")
         
+def searchcustomerbyname(cname):
+    for data in readFile():
+        if data.n.lower() == cname.lower():
+            customer = data
+            break
+        else:
+            customer = None
+    if customer != None:
+        customer.displaycustomer()
+    else: print("No such customer found.")
+
+def deletecustomer(cid):
+    customer = []
+    for data in readFile():
+        if data.i == cid:
+            cust = data
+        else:
+            customer.append(data)
+    if cust != None:
+        decision = input(f"Are you sure you want to delete '{cust.i}''{cust.n}'? (Y/N): ")
+        if decision.lower() == "y" :
+            os.remove(filelocation)
+            for c in customer:
+                # print(c)
+                writeFile(f"{c.i},{c.n},{c.p},{c.b},{c.c}\n")
+        else: print("Deletion Cancelled:")
+    else: print("No such customer found.")

@@ -6,5 +6,5 @@ class Customer:
         self.b = balance
         self.c = ctzno
 
-    def displayproduct(self):
+    def displaycustomer(self):
         print(f"{self.i},{self.n},{self.p},{self.b},{self.c}\n")
