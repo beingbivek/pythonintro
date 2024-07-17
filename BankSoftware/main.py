@@ -4,11 +4,12 @@
 import controller as c
 
 usertext = '''
+Welcome to Bank Customer
 Enter
 '1' to add Customer
 '2' to view all Customer
 '3' to view single customer
-'4' to search customer
+'4' to search customer via name
 '5' to delete customer
 '6' to update customer
 '''
@@ -28,5 +29,6 @@ elif user_input == 5:
     cid = input("Enter Customer ID to delete: ")
     c.deletecustomer(cid)
 elif user_input == 6:
-    pass
+    uid = input("Enter Customer ID to update: ")
+    c.updatecustomer(uid)
 else: print("Invalid Option")
