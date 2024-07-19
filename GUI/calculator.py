@@ -3,9 +3,9 @@ from tkinter import messagebox
 
 def get_sum():
     # Get value from textbox
-    value1 = float(entry1.get()) # Get values from entry 1 textbox
-    value2 = float(entry2.get())
-    result = value1 + value2
+    value1 = entry1.get()+"+"+entry2.get() # Get values from entry 1 textbox
+    # value2 = float(entry2.get())
+    result = eval(value1)
     messagebox.showinfo("Result",f"The sum is {result}")
 
 def get_difference():

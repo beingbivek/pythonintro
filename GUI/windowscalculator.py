@@ -53,7 +53,7 @@ for button in buttons:
     else:
         btn = tk.Button(root, text=text, padx=20, pady=20, font=("Helvetica", 18), command=lambda value=text: button_click(value), bg="#d3d3d3")
 
-    btn.grid(row=row, column=col, rowspan=rowspan, columnspan=colspan, sticky="nsew")
+    # btn.grid(row=row, column=col, rowspan=rowspan, columnspan=colspan, sticky="nsew") # Sticky gives no space between buttons
 
 # Configure grid weights to make buttons resizeable
 for i in range(6):
