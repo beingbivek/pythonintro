@@ -47,6 +47,7 @@ def userselect():
         _isShowing = True
         entry_id.pack(pady=5)
         id_button.pack(pady=5)
+        frame.pack_forget()
     else: quotelabel.config(text="Invalid Value"); authorlabel.config(text="")
 
 # Initialize tkinter
