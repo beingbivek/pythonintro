@@ -1,0 +1,50 @@
+Day 23: Transaction Processing System
+
+Transactions in MySQL are designed to adhere to the ACID properties, which are:
+
+1. Atomicity: Ensures that all operations within the work unit are completed successfully. If not, the transaction is aborted at the point of failure, and all data is rolled back to its previous state.
+
+2. Consistency: Ensures that the database properly changes states upon a successfully committed transaction.
+
+3. Isolation: Enables transactions to operate independently of and transparently to each other.
+
+4. Durability: Ensures that the result or effect of a committed transaction is permanently stored in the database and is not lost in the event of a system failure.
+
+Example:
+-- Table Creation
+CREATE TABLE accounts (
+    account_id INT AUTO_INCREMENT PRIMARY KEY,
+    account_type VARCHAR(50),
+    customer_name VARCHAR(255) NOT NULL,
+    balance DECIMAL(13, 2) NOT NULL
+);
+
+CREATE TABLE transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    from_account INT,
+    to_account INT,
+    amount DECIMAL(10, 2) NOT NULL,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (from_account) REFERENCES accounts(account_id),
+    FOREIGN KEY (to_account) REFERENCES accounts(account_id)
+);
+
+INSERT INTO accounts (account_type, customer_name, balance) VALUES
+('Savings', 'Aarav Bhattarai', 4000.00),
+('Savings', 'Saanvi Dahal', 3500.00),
+('Savings', 'Ayaan Shrestha', 5000.00),
+('Savings', 'Anika Karki', 2500.00),
+('Savings', 'Sita Joshi', 3200.00),
+('Checking', 'Pranav Joshi', 850.00);
+
+
+-- Begin Transaction for Money Transfer
+START TRANSACTION;
+
+-- Assuming we've checked and confirmed sufficient balance in the savings account
+UPDATE accounts SET balance = balance - 200 WHERE account_id = 1;
+UPDATE accounts SET balance = balance + 200 WHERE account_id = 2;
+INSERT INTO transactions (from_account, to_account, amount) VALUES (1, 2, 200);
+
+-- Commit Transaction
+COMMIT;

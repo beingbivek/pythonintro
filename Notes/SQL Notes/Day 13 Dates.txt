@@ -1,0 +1,15 @@
+Day 13: Dates
+
+DATE[YYYY-MM-DD]
+DATETIME [YYYY-MM-DD HH:MM:SS]
+YEAR [YYYY, YY]
+
+SELECT CURRENT_DATE();
+SELECT NOW();
+SELECT CURRENT_TIME();
+SELECT DATEDIFF(CURRENT_DATE(),"1997-05-14") AS totaldayafterbirth;
+SELECT DATE_ADD(CURRENT_DATE, INTERVAL 20 DAY);
+SELECT DAYNAME("1997-05-14");
+
+Reference:
+https://www.w3schools.com/Sql/func_mysql_dayofmonth.asp

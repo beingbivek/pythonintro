@@ -1,0 +1,15 @@
+Day 7: Join
+CREATE TABLE names(
+id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+name VARCHAR(150)    
+
+);
+
+CREATE TABLE phones(
+id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+phone VARCHAR(15) NOT NULL,
+nameid int NOT NULL,
+FOREIGN KEY(nameid)  REFERENCES names(id)   
+);
+
+SELECT names.name, phones.phone FROM names INNER JOIN phones ON names.id= phones.nameid;

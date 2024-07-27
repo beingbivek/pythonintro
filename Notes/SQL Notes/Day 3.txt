@@ -1,0 +1,40 @@
+Day 3
+
+Database: myshopdb
+CREATE DATABASE myshopdb;
+
+
+CREATE TABLE products(
+id int PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+qty int NOT NULL,
+price double NOT NULL
+);
+
+INSERT INTO products(name, price, qty) VALUES('MSI Laptop',150,5);
+INSERT INTO products(name, price, qty) VALUES('Apple Laptop',4150,10);
+INSERT INTO products(name, price, qty) VALUES('Sony Camera',1150,15);
+
+UPDATE <TableName> SET colname=value WHERE Condition;
+UPDATE products SET qty=6 WHERE id=1;
+UPDATE products SET qty=11, name= 'Lenevo Laptop' WHERE id=2;
+
+DELETE FROM <TableName> WHERE Condition
+DELETE FROM products WHERE id=5;
+
+CRUD: Create, Read, Update, Delete
+
+SELECT name FROM products;
+SELECT name, price FROM products;
+
+SELECT * FROM products WHERE qty=11;
+SELECT * FROM products WHERE qty BETWEEN 11 AND 15;
+
+
+SELECT * FROM products ORDER BY name;
+SELECT * FROM products ORDER BY name DESC;
+
+
+
+
+

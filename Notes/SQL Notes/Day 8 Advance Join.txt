@@ -1,0 +1,32 @@
+Day 8 Advance Join
+
+Database Name: facebookdb
+Table [users, posts, comments]
+
+
+CREATE TABLE users(
+id int AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+pass VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE posts(
+id int AUTO_INCREMENT PRIMARY KEY,
+post TEXT NOT NULL,
+date datetime DEFAULT CURRENT_TIMESTAMP,
+byuser int,
+FOREIGN KEY(byuser) REFERENCES users(id)
+);
+
+
+CREATE TABLE comments(
+id int AUTO_INCREMENT PRIMARY KEY,
+userid int,
+comment text NOT NULL,
+postid int,
+date datetime DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (userid) REFERENCES users(id),
+FOREIGN KEY (postid) REFERENCES posts(id)
+);
+
+INSERT INTO comments( userid, comment, postid) VALUES (3,'Happy Birthday hajur', 4);

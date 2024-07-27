@@ -1,0 +1,20 @@
+Day 15: Stored Procedure
+
+Syntax:
+DELIMITER $$
+CREATE PROCEDURE ProName()
+BEGIN
+Query;
+END$$
+
+How to Call
+CALL Proname()
+
+DELIMITER $$
+CREATE PROCEDURE insertuser(IN n VARCHAR(100), IN p VARCHAR(100), IN a VARCHAR(100) )
+BEGIN
+INSERT INTO users(name,pass,address) VALUES (n,p,a);
+END$$
+
+
+DROP PROCEDURE ProName()

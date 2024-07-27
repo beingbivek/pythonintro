@@ -1,0 +1,46 @@
+Day 20: Triggers Part 2
+
+CREATE TABLE employee_history(
+h_id INT PRIMARY KEY AUTO_INCREMENT,
+emp_id INT,
+operation_type ENUM('INSERT','UPDATE','DELETE'),
+operation_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+name VARCHAR(100),
+salary DECIMAL(13,2)
+);
+
+Before Insert
+DELIMITER $$
+CREATE TRIGGER before_emp_insert
+BEFORE INSERT ON employees 
+FOR EACH ROW
+BEGIN
+INSERT INTO employee_history(emp_id, operation_type, name, salary) 
+VALUES (NEW.id, 'Insert', NEW.name, NEW.salary);
+
+END $$
+
+DROP TRIGGER before_emp_insert;
+DROP TRIGGER before_emp_update;
+Before Update
+DELIMITER $$
+CREATE TRIGGER before_emp_update
+BEFORE UPDATE ON employees 
+FOR EACH ROW
+BEGIN
+INSERT INTO employee_history(emp_id, operation_type, name, salary) 
+VALUES (NEW.id, 'UPDATE', NEW.name, NEW.salary);
+
+END $$
+
+Before Delete
+DELIMITER $$
+CREATE TRIGGER before_emp_delete
+BEFORE DELETE ON employees 
+FOR EACH ROW
+BEGIN
+INSERT INTO employee_history(emp_id, operation_type, name, salary) 
+VALUES (OLD.id, 'DELETE', OLD.name, OLD.salary);
+
+END $$
+

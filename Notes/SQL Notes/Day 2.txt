@@ -1,0 +1,41 @@
+Day 2
+
+Database> Table[s] > Data
+
+Table
+id name phone
+1  hari
+
+CREATE TABLE contacts(
+id int PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+phone VARCHAR(15)
+);
+
+
+INSERT INTO contacts(name,phone) VALUES ('Hari Sharma','989898');
+
+
+CREATE TABLE users(
+id int PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+password VARCHAR(256),
+dateadded date
+);
+
+
+CREATE TABLE products
+[id, name price]
+
+Add 5 Product.
+
+CREATE TABLE products(
+id int PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+price double
+)
+
+INSERT INTO products(name, price) VALUES('MSI Laptop',150);
+INSERT INTO products(name, price) VALUES('Apple Laptop',4150);
+INSERT INTO products(name, price) VALUES('Sony Camera',1150);
+

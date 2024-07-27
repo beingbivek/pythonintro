@@ -1,0 +1,20 @@
+Day 4
+- AND, OR, NOT
+
+SELECT * FROM products WHERE qty =15;
+SELECT * FROM products WHERE qty =15 and price=110;
+SELECT * FROM products WHERE qty  IN(15,10);
+SELECT * FROM products WHERE qty NOT IN(15);
+
+
+To Add Column
+ALTER TABLE products ADD COLUMN remarks TEXT;
+
+
+NULL: Field With No Value
+SELECT * FROM products WHERE remarks IS NULL;
+SELECT * FROM products WHERE remarks IS NOT NULL;
+
+
+SELECT id, name, qty, price, (qty*price) AS total FROM products;
+

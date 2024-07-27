@@ -1,0 +1,9 @@
+Day 6: LIMIT, Aliases
+
+Limit is used to limit the number of data
+SELECT * FROM products ORDER BY name LIMIT 1;
+
+Aliases: Temporary name given to column or table.
+
+SELECT name AS "Product Name" FROM products;
+SELECT NOW() as "MyTime";

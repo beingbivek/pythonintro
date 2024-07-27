@@ -1,0 +1,15 @@
+Day 17: Union
+
+employees [id,name]
+clients [id,name]
+
+CREATE TABLE employees(
+id int PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100) NOT NULL    
+);
+
+Union:
+SELECT name FROM employees UNION SELECT name FROM clients;
+
+Intersection:
+SELECT DISTINCT a.name FROM employees a INNER JOIN clients b ON a.name = b.name;

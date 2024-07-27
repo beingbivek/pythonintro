@@ -1,0 +1,17 @@
+Day 5: Searching 
+
+LIKE Operator is used in search.
+SELECT * FROM products WHERE name LIKE 'M%'; - Start With M
+SELECT * FROM products WHERE name LIKE '%P'; - End With P
+SELECT * FROM products WHERE name LIKE '%op%';
+SELECT * FROM products WHERE name LIKE '%op%' OR name LIKE 'M%' ;
+
+_
+
+M__ LAPTOP
+
+Create Database Called myshopdb
+Create Table called suppliers[id, name, address, remainingpayment]
+Add 25 customers
+Find all customers whose name start with a and have remaining payment of 
+more than 2500.

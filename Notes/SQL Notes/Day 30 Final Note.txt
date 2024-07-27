@@ -1,0 +1,7 @@
+Day 30: Final Note
+
+Thank you for Taking my SQL class. I hope you learned something from it. Wish you all the best for your future.
+
+More to Explore:
+Quiz: https://www.w3schools.com/sql/sql_quiz.asp
+Interview Questions: https://www.interviewbit.com/sql-interview-questions/#sql

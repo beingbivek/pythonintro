@@ -1,0 +1,9 @@
+Day 29 Unique:
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) UNIQUE
+);
+ALTER TABLE Employees
+ADD UNIQUE (Email);
+

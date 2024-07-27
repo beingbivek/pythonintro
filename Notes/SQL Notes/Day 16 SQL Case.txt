@@ -1,0 +1,2 @@
+Day 16: SQL Case
+SELECT name, price, CASE WHEN price > 1000 THEN 'Price is more than 1000' WHEN price < 1000 THEN 'Price is less than 1000' ELSE 'Something Went Wrong' END AS result FROM products;

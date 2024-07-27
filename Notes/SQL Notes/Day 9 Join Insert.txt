@@ -1,0 +1,40 @@
+Day 9: Join Insert
+
+Insert Into Users/ Posts and Comments:
+
+INSERT INTO users (name, pass) VALUES ('Aarav Sharma', 'password123');
+INSERT INTO users (name, pass) VALUES ('Binita Maharjan', 'password124');
+INSERT INTO users (name, pass) VALUES ('Suman Tamang', 'password125');
+INSERT INTO users (name, pass) VALUES ('Pooja Singh', 'password126');
+INSERT INTO users (name, pass) VALUES ('Rahul Bista', 'password127');
+INSERT INTO users (name, pass) VALUES ('Anita Thapa', 'password128');
+INSERT INTO users (name, pass) VALUES ('Bikash Gurung', 'password129');
+INSERT INTO users (name, pass) VALUES ('Nisha Adhikari', 'password130');
+INSERT INTO users (name, pass) VALUES ('Suresh Karki', 'password131');
+INSERT INTO users (name, pass) VALUES ('Manisha Basnet', 'password132');
+
+INSERT INTO posts (post, byuser) VALUES ('Beautiful day in Pokhara!', 1);
+INSERT INTO posts (post, byuser) VALUES ('Excited for the new adventure.', 2);
+INSERT INTO posts (post, byuser) VALUES ('Just finished a lovely book.', 3);
+INSERT INTO posts (post, byuser) VALUES ('Looking for movie recommendations.', 4);
+INSERT INTO posts (post, byuser) VALUES ('Who wants to join for a hike this weekend?', 5);
+INSERT INTO posts (post, byuser) VALUES ('Found a new coffee shop around the corner.', 6);
+INSERT INTO posts (post, byuser) VALUES ('Thinking about the meaning of life...', 7);
+INSERT INTO posts (post, byuser) VALUES ('Does anyone know a good place to learn guitar?', 8);
+INSERT INTO posts (post, byuser) VALUES ('Here’s to those who inspire us and don’t even know it.', 9);
+INSERT INTO posts (post, byuser) VALUES ('Exploring the old streets of Kathmandu.', 10);
+
+INSERT INTO comments (userid, comment, postid) VALUES (2, 'Absolutely stunning view!', 1);
+INSERT INTO comments (userid, comment, postid) VALUES (1, 'Count me in!', 5);
+INSERT INTO comments (userid, comment, postid) VALUES (3, 'Try "Inception", a great movie.', 4);
+INSERT INTO comments (userid, comment, postid) VALUES (4, 'I can lend you the book I just finished.', 3);
+INSERT INTO comments (userid, comment, postid) VALUES (5, 'Check out "Strings Music Cafe".', 8);
+INSERT INTO comments (userid, comment, postid) VALUES (6, 'I needed this inspiration today, thank you.', 9);
+INSERT INTO comments (userid, comment, postid) VALUES (7, 'I’d love to learn more about your thoughts on life.', 7);
+INSERT INTO comments (userid, comment, postid) VALUES (8, 'I’m always up for coffee, let’s go!', 6);
+INSERT INTO comments (userid, comment, postid) VALUES (9, 'What book was it? I’m curious!', 3);
+INSERT INTO comments (userid, comment, postid) VALUES (10, 'The old architecture there is amazing!', 10);
+
+Get All Posts With User Name
+
+

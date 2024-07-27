@@ -1,0 +1,4 @@
+Day 18: Index
+- It helps to retrive data faster.
+
+CREATE INDEX idx_isbn ON books(isbn);

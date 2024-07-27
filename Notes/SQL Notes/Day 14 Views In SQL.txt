@@ -1,0 +1,4 @@
+Day 14: Views In SQL
+
+Create: CREATE VIEW viewname AS <SQL>
+Delete: DROP VIEW viewname

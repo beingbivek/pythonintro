@@ -1,0 +1,63 @@
+Day 21: Normalization
+Process of organizing data into multiple tables.
+
+Advantage
+Reduce Data Redundancy
+
+Library Software
+- RecordId
+- BookTitle
+- AuthorName
+- BorrowerID
+- BorrowerName
+- BorrowerContact
+- DateBorrowed
+- DueDate
+
+Books
+- id
+- title
+- author
+
+Borrowers 
+- id
+- name
+- contact
+
+Borrowrecords
+- id
+- bookid [Foreign Key]
+- borrowerid [Foreign Key]
+- dateborrowed
+- duedate
+
+CREATE TABLE books(
+id int PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100) NOT NULL,
+author VARCHAR(100)    
+    
+);
+
+CREATE TABLE borrowers (
+id int PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100) NOT NULL,
+contact VARCHAR(20)    
+    
+);
+
+/*
+- id
+- bookid [Foreign Key]
+- borrowerid [Foreign Key]
+- dateborrowed
+- duedate
+*/
+CREATE TABLE borrowrecords (
+id int PRIMARY KEY AUTO_INCREMENT,
+bookid int,
+borrowerid int,
+dateborrowed date,
+duedate date,
+FOREIGN KEY (bookid) REFERENCES books(id),    
+FOREIGN KEY (borrowerid) REFERENCES borrowers(id)    
+);

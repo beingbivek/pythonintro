@@ -1,0 +1,3 @@
+Day 11: Group By
+
+SELECT COUNT(address), address FROM users GROUP BY address;

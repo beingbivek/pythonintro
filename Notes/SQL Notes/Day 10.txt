@@ -1,0 +1,7 @@
+Day 10
+Get All comments on specific post
+
+SELECT comments.id, comments.comment, comments.date, users.name AS commentor_name FROM comments JOIN users ON comments.userid=users.id WHERE comments.postid=1;
+
+
+Getting All Posts and Comments

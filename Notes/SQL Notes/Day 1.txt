@@ -1,0 +1,44 @@
+Day 1
+Database: Collection of Data.
+
+Why It is important
+- Digital
+- Secure
+- Easy to insert, update, delete, retrive.
+
+Types:
+- SQL: Structured Query Language 
+- NOSQL: Not Only SQL
+
+E.g of SQL: MySQL, Oracle, MSSQL, Postgres
+E.g of No SQL: MongoDB
+
+
+MySQL
+- Powerful tool for managing Relational database. 
+- Open Source
+- Easy to use, reliable
+
+Installation
+- XAMPP 
+
+
+SQL to Create Databse
+CREATE DATABASE <databasename>;
+
+SQL to View Databsse
+SHOW DATABASES;
+
+SQL to Delete Database
+DROP DATABASE <databasename>;
+
+
+Create Database: collegedb
+View All Databases: Took Screenshot
+Delete Database: collegedb
+
+
+
+
+
+

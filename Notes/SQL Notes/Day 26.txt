@@ -1,0 +1,9 @@
+Day 26
+Different Type of SQL
+- MySQL
+- MSSQL
+- Oracle
+- Postgres
+
+NoSQL
+- Mongo DB
